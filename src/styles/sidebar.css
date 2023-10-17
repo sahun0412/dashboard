@@ -1,0 +1,17 @@
+.sideBar{
+    background-color: rgb(17, 17, 80);
+    color: white;
+    height: 700px;
+    
+}
+
+ul li {
+    list-style: none;
+    color: rgb(255, 255, 255);
+}
+.btn{
+    color: white;
+}
+
+
+

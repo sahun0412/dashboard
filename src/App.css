@@ -1,38 +1,84 @@
+/* Styles for .graph element */
+.graph {
+  width: 100vw; 
+  height: 400px; 
+}
+
+/* Styles for .main element */
+.main {
+  background-color: #f0f0f0; 
+  overflow-y: scroll;
+  overflow-x: hidden; 
+  height: 100vh; 
+}
+
+/* Styles for section elements */
+section {
+  background-color: #f0f0f0; 
+}
+
+/* Styles for .pie element */
+.pie {
+  width: 100vw; 
+  height: 400px; 
+}
+
+/* Styles for .side element */
+.side {
+  margin: -10px; 
+
+}
+
+/* Import the 'Quicksand' font from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+/* Styles for .App element */
 .App {
-  text-align: center;
+  height: 100vh; 
+  display: grid; 
+  grid-template-columns: 3fr 9fr; 
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif; 
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Media Queries for responsive design */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* For screens with a maximum width of 992px */
+@media (max-width:992px){
+  .App {
+      height: 100%;
+      display: flex; 
+      flex-direction: column; 
+  }
+
+  .main {
+      margin-top: -40px; 
+
+  }
+  .navbar {
+      display: initial; 
+      z-index: 9999; 
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/* For screens with a maximum width of 769px */
+@media (max-width:769px){
+  .App {
+      display: flex; 
+      flex-direction: column; 
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  .main {
+      overflow: auto;
+      overflow-x: hidden; 
+  }
+
+  .navbar {
+      display: initial; 
+      z-index: 9999; 
+  }
+
+  .graph {
+      width: 350px; 
   }
 }
